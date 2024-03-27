@@ -40,11 +40,10 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
         ) : (
           <div className="avatar opacity-90">
             <div
-              className={`mb-8 rounded-full w-32 h-32 ${
-                avatarRing
-                  ? 'ring ring-primary ring-offset-base-100 ring-offset-2'
-                  : ''
-              }`}
+              className={`mb-8 rounded-full w-32 h-32 ${avatarRing
+                ? 'ring ring-primary ring-offset-base-100 ring-offset-2'
+                : ''
+                }`}
             >
               {
                 <LazyImage
@@ -71,9 +70,12 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             )}
           </h5>
           <div className="mt-3 text-base-content text-opacity-60 font-mono">
+            {/* {loading || !profile
+              ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
+              : profile.bio} */}
             {loading || !profile
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
-              : profile.bio}
+              : 'With over a decade of hands-on experience leading cross-functional teams in the design, development, and delivery of complex distributed scalable and cloud solutions aimed at addressing accounting, finance, fulfillment and healthcare; I am seeking a challenging role in a large-scale environment. My goal is to tackle complex challenges and deliver tailored solutions that meet unique requirements to improve business automation processes.'}
           </div>
         </div>
         {resumeFileUrl &&

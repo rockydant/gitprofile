@@ -198,14 +198,14 @@ const GitProfile = ({ config }: { config: Config }) => {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                 <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    {!sanitizedConfig.themeConfig.disableSwitch && (
+                    {/* {!sanitizedConfig.themeConfig.disableSwitch && (
                       <ThemeChanger
                         theme={theme}
                         setTheme={setTheme}
                         loading={loading}
                         themeConfig={sanitizedConfig.themeConfig}
                       />
-                    )}
+                    )} */}
                     <AvatarCard
                       profile={profile}
                       loading={loading}
@@ -246,6 +246,30 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
+                    {/* {sanitizedConfig.blog.display && (
+                      <BlogCard
+                        loading={loading}
+                        googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                        blog={sanitizedConfig.blog}
+                      />
+                    )} */}
+                    {/* {sanitizedConfig.publications.length !== 0 && (
+                      <PublicationCard
+                        loading={loading}
+                        publications={sanitizedConfig.publications}
+                      />
+                    )} */}
+                    {sanitizedConfig.projects.external.projects.length !==
+                      0 && (
+                        <ExternalProjectCard
+                          loading={loading}
+                          header={sanitizedConfig.projects.external.header}
+                          externalProjects={
+                            sanitizedConfig.projects.external.projects
+                          }
+                          googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                        />
+                      )}
                     {sanitizedConfig.projects.github.display && (
                       <GithubProjectCard
                         header={sanitizedConfig.projects.github.header}
@@ -254,30 +278,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                         username={sanitizedConfig.github.username}
                         googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
-                      />
-                    )}
-                    {sanitizedConfig.publications.length !== 0 && (
-                      <PublicationCard
-                        loading={loading}
-                        publications={sanitizedConfig.publications}
-                      />
-                    )}
-                    {sanitizedConfig.projects.external.projects.length !==
-                      0 && (
-                      <ExternalProjectCard
-                        loading={loading}
-                        header={sanitizedConfig.projects.external.header}
-                        externalProjects={
-                          sanitizedConfig.projects.external.projects
-                        }
-                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
-                      />
-                    )}
-                    {sanitizedConfig.blog.display && (
-                      <BlogCard
-                        loading={loading}
-                        googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
-                        blog={sanitizedConfig.blog}
                       />
                     )}
                   </div>

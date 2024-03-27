@@ -87,6 +87,7 @@ export const getSanitizedConfig = (
         config?.experiences?.filter(
           (experience) =>
             experience.company ||
+            experience.description ||
             experience.position ||
             experience.from ||
             experience.to,

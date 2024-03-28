@@ -8,6 +8,7 @@ interface AvatarCardProps {
   loading: boolean;
   avatarRing: boolean;
   resumeFileUrl?: string;
+  headlines?: Array<string>;
 }
 
 /**
@@ -23,6 +24,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   loading,
   avatarRing,
   resumeFileUrl,
+  headlines,
 }): JSX.Element => {
   return (
     <div className="card shadow-lg compact bg-base-100">
@@ -69,13 +71,13 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               </span>
             )}
           </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
-            {/* {loading || !profile
+          <div className="mt-3 text-base-content text-opacity-60 font-mono text-sm whitespace-pre-line">
+            {loading || !headlines
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
-              : profile.bio} */}
+              : headlines.join(" | ")}
             {loading || !profile
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
-              : 'With over a decade of hands-on experience leading cross-functional teams in the design, development, and delivery of complex distributed scalable and cloud solutions aimed at addressing accounting, finance, fulfillment and healthcare; I am seeking a challenging role in a large-scale environment. My goal is to tackle complex challenges and deliver tailored solutions that meet unique requirements to improve business automation processes.'}
+              : '\n\nWith over a decade of hands-on experience leading cross-functional teams in the design, development, and delivery of complex distributed scalable and cloud solutions aimed at addressing accounting, finance, fulfillment and healthcare; \n\nI am seeking a challenging role in a large-scale environment. My goal is to tackle complex challenges and deliver tailored solutions that meet unique requirements to improve business automation processes.'}
           </div>
         </div>
         {resumeFileUrl &&

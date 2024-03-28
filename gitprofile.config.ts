@@ -36,40 +36,40 @@ const CONFIG = {
           title: 'Dot.DirectMail',
           description:
             'A legacy system plagued by several issues: it suffers from scalability limitations, poses challenges in maintenance, heavily relies on Unix and network dependencies, involves extensive manual processes, and lacks the capability to integrate with partner APIs. This project represents a major initiative for our company, as it involves integration with key clients such as Lob, CalOptima, Kaiser Permanente, and Verizon…'
-            + 'In my capacity as a team leader and senior developer, I played a pivotal role in this project by orchestrating collaboration with our partners to seamlessly integrate their APIs and services. Furthermore, I spearheaded the design and execution of a sophisticated distributed cloud architecture utilizing cutting-edge technologies such as Azure, ASP.NET Core, SQL Server, RabbitMQ, Prometheus, Angular, TypeScript, EF & Dapper, Hangfire, Power BI, Python, and Jenkins.'
-            + 'The results of this project have significantly influenced the company\'s core profitability and facilitated partnerships with major clients. We have observed a notable increase in order volume, elevating daily order processing from 20,000 to 70,000, and exceeding 300,000 orders during peak periods. This enhancement has streamlined processes, enabling automated processing and mitigating errors inherent in manual labor.',
+            + '\n\nIn my capacity as a team leader and senior developer, I played a pivotal role in this project by orchestrating collaboration with our partners to seamlessly integrate their APIs and services. Furthermore, I spearheaded the design and execution of a sophisticated distributed cloud architecture utilizing cutting-edge technologies such as Azure, ASP.NET Core, SQL Server, RabbitMQ, Prometheus, Angular, TypeScript, EF & Dapper, Hangfire, Power BI, Python, and Jenkins.'
+            + '\n\nThe results of this project have significantly influenced the company\'s core profitability and facilitated partnerships with major clients. We have observed a notable increase in order volume, elevating daily order processing from 20,000 to 70,000, and exceeding 300,000 orders during peak periods. This enhancement has streamlined processes, enabling automated processing and mitigating errors inherent in manual labor.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://cdn-icons-png.flaticon.com/512/2361/2361843.png',
           link: '',
         },
         {
           title: 'Dot.Security',
           description:
             'The company\'s software system exhibits weaknesses in cybersecurity, with vulnerabilities present in both legacy applications and outdated systems, rendering them susceptible to exploitation. It is imperative to address these shortcomings, especially considering the stringent security standards and integration requirements demanded by valuable partners.'
-            + 'In my role, I lead the exploration and strategic planning of the cybersecurity landscape, overseeing engagements with third-party vendors for penetration testing. I am responsible for fortifying the security of on-premises servers through the deployment and configuration of Suricata, while ensuring the integrity of API security utilizing Owasp Zap. Additionally, I orchestrate the implementation and oversight of Microsoft Defender for Azure cloud security, alongside the establishment of Prowler for comprehensive vulnerability management. My proficiency in these areas is underscored by the completion of the AZ-400 certificate training'
-            + 'As a result of this project, we have achieved HITRUST and HIPAA compliance, attained an A+ rating in Security Scorecard assessments, and bolstered confidence in cybersecurity among our clients, establishing a foundation of trust and reliability.',
+            + '\n\nIn my role, I lead the exploration and strategic planning of the cybersecurity landscape, overseeing engagements with third-party vendors for penetration testing. I am responsible for fortifying the security of on-premises servers through the deployment and configuration of Suricata, while ensuring the integrity of API security utilizing Owasp Zap. Additionally, I orchestrate the implementation and oversight of Microsoft Defender for Azure cloud security, alongside the establishment of Prowler for comprehensive vulnerability management. My proficiency in these areas is underscored by the completion of the AZ-400 certificate training'
+            + '\n\nAs a result of this project, we have achieved HITRUST and HIPAA compliance, attained an A+ rating in Security Scorecard assessments, and bolstered confidence in cybersecurity among our clients, establishing a foundation of trust and reliability.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://www.shutterstock.com/image-vector/security-logo-600nw-526382002.jpg',
           link: '',
         },
         {
           title: 'Gearment ERP',
           description:
             'The company\'s challenges stemmed from rapid expansion and growth, highlighting the limitations of the existing CRM and ERP systems in accommodating scalable operations amidst high volume demands. The lack of standardized processes rendered maintenance arduous, particularly in the context of distribution across multiple locations. Moreover, system downtimes during peak sales seasons led to dissatisfaction among end-users, prompting complaints.'
-            + 'In my multifaceted role as a project manager, business analyst, and technical leader, I successfully led a team of four professionals (2 seniors and 2 juniors) in the implementation of the Odoo solution as the core ERP system. This initiative involved designing and developing satellite applications and systems tailored to integrate seamlessly with production machinery and processes. Leveraging technologies such as Odoo, Python, Asp.net Core 6, SQL Server, Blazor, Datadog, and Prometheus, we ensured the seamless orchestration of operations across various facets of the organization.'
-            + 'The project has resulted in maintaining system stability, expanding the capacity to accommodate additional product lines, streamlining setup processes for seamless distribution to new locations, automating various processes, tripling the system\'s capability to handle high volume demand during peak seasons, and enhancing integration capabilities with emerging systems.',
+            + '\n\nIn my multifaceted role as a project manager, business analyst, and technical leader, I successfully led a team of four professionals (2 seniors and 2 juniors) in the implementation of the Odoo solution as the core ERP system. This initiative involved designing and developing satellite applications and systems tailored to integrate seamlessly with production machinery and processes. Leveraging technologies such as Odoo, Python, Asp.net Core 6, SQL Server, Blazor, Datadog, and Prometheus, we ensured the seamless orchestration of operations across various facets of the organization.'
+            + '\n\nThe project has resulted in maintaining system stability, expanding the capacity to accommodate additional product lines, streamlining setup processes for seamless distribution to new locations, automating various processes, tripling the system\'s capability to handle high volume demand during peak seasons, and enhancing integration capabilities with emerging systems.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://www.ejaftech.com/wp-content/uploads/2020/03/odoo-erp.jpg',
           link: '',
         },
         {
           title: 'Leading Edge Group',
           description:
             'This project aimed at bolstering a group buying online ecommerce company catering to over 400 retail stores and small businesses. The existing system suffered from fragmentation due to reliance on outdated applications, with many processes still dependent on manual labor. Additionally, the management of transaction and invoice data was constrained by reliance on physical hard copies.'
-            + 'In this project, I served as a team leader and subsequently assumed the role of application manager, overseeing a team of five members and leveraging both Scrum and Kanban methodologies for efficient project management. My responsibilities included collaborating closely with the accounting and finance departments to conduct a comprehensive analysis of the existing systems, gathering client requirements, and architecting and designing a solution to reorganize and incorporate new technologies for system modernization. Additionally, I spearheaded strategic planning initiatives, delegated tasks to team members, and ensured the successful execution of the project. The technologies utilized in this endeavor encompassed Microsoft Dynamics CRM and GP, Scribe, ASP.NET Web Form MVC and Web API, SQL Server, LINQ, Entity Framework, AngularJS, jQuery, JavaScript, HTML, CSS, SCSS, Semantic-UI, Bootstrap, SSIS, and version control systems such as GitHub and Bitbucket, with continuous integration and continuous deployment (CI/CD) practices in place.'
-            + 'The culmination of this project resulted in substantial cost savings for the client, totaling approximately 3 million dollars annually. The implemented system demonstrated robust scalability, ease of maintenance, and seamless integration with emerging technologies. Additionally, my contributions to the project were acknowledged with the prestigious Employee of the Year award.',
+            + '\n\nIn this project, I served as a team leader and subsequently assumed the role of application manager, overseeing a team of five members and leveraging both Scrum and Kanban methodologies for efficient project management. My responsibilities included collaborating closely with the accounting and finance departments to conduct a comprehensive analysis of the existing systems, gathering client requirements, and architecting and designing a solution to reorganize and incorporate new technologies for system modernization. Additionally, I spearheaded strategic planning initiatives, delegated tasks to team members, and ensured the successful execution of the project. The technologies utilized in this endeavor encompassed Microsoft Dynamics CRM and GP, Scribe, ASP.NET Web Form MVC and Web API, SQL Server, LINQ, Entity Framework, AngularJS, jQuery, JavaScript, HTML, CSS, SCSS, Semantic-UI, Bootstrap, SSIS, and version control systems such as GitHub and Bitbucket, with continuous integration and continuous deployment (CI/CD) practices in place.'
+            + '\n\nThe culmination of this project resulted in substantial cost savings for the client, totaling approximately 3 million dollars annually. The implemented system demonstrated robust scalability, ease of maintenance, and seamless integration with emerging technologies. Additionally, my contributions to the project were acknowledged with the prestigious Employee of the Year award.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://static.vecteezy.com/system/resources/previews/027/381/351/original/shopping-cart-icon-shopping-trolley-icon-shopping-cart-logo-container-for-goods-and-products-economics-symbol-design-elements-basket-symbol-silhouette-retail-design-elements-vector.jpg',
           link: '',
         },
       ],
@@ -103,6 +103,12 @@ const CONFIG = {
     fileUrl:
       'https://docs.google.com/document/d/1MJjyi3zM6E2yfhLhY2kR20g2vJDPm_tH/edit?usp=sharing&ouid=109856236342900031154&rtpof=true&sd=true', // Empty fileUrl will hide the `Download Resume` button.
   },
+  headlines: [
+    'Developer',
+    'Cyber Security Enthusiast',
+    'Data Science & Machine Learning Dreamer',
+    'BJJ Practicioner',
+  ],
   skills: [
     'C#',
     'Python',

@@ -370,6 +370,8 @@ interface Config {
    */
   skills?: Array<string>;
 
+  headlines?: Array<string>;
+
   /**
    * Experience list
    */

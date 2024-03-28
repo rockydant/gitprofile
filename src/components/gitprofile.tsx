@@ -47,6 +47,8 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
 
+  console.log(sanitizedConfig.headlines)
+
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
       if (sanitizedConfig.projects.github.mode === 'automatic') {
@@ -211,6 +213,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                       loading={loading}
                       avatarRing={sanitizedConfig.themeConfig.displayAvatarRing}
                       resumeFileUrl={sanitizedConfig.resume.fileUrl}
+                      headlines = {sanitizedConfig.headlines}
                     />
                     <DetailsCard
                       profile={profile}

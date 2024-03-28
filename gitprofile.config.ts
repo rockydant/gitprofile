@@ -107,7 +107,7 @@ const CONFIG = {
     'Developer',
     'Cyber Security Enthusiast',
     'Data Science & Machine Learning Dreamer',
-    'BJJ Practicioner',
+    'BJJ Practitioner',
   ],
   skills: [
     'C#',

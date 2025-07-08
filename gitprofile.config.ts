@@ -101,7 +101,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://docs.google.com/document/d/1MJjyi3zM6E2yfhLhY2kR20g2vJDPm_tH/edit?usp=sharing&ouid=109856236342900031154&rtpof=true&sd=true', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/file/d/1QzpB_uEJzsc5wZWDNfBVOrTFpMDuZgHq/view', // Empty fileUrl will hide the `Download Resume` button.
   },
   headlines: [
     'CTO at Ethika',

@@ -31,7 +31,7 @@ const CONFIG = {
     external: {
       header: 'My Projects',
       // To hide the `External Projects` section, keep it empty.
-      projects: [
+      projects: [        
         {
           title: 'Dot.DirectMail',
           description:
@@ -76,8 +76,8 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Bao Dang',
-    description: '',
+    title: 'Bao Dang - Data Scientist - Tech Executive - Software Architect | Portfolio & Projects',
+    description: 'Portfolio of Bao Dang, a data scientist, tech executive, and software architect with a passion for building scalable and efficient systems.',
     imageURL: '',
   },
   social: {
@@ -104,11 +104,12 @@ const CONFIG = {
       'https://docs.google.com/document/d/1MJjyi3zM6E2yfhLhY2kR20g2vJDPm_tH/edit?usp=sharing&ouid=109856236342900031154&rtpof=true&sd=true', // Empty fileUrl will hide the `Download Resume` button.
   },
   headlines: [
-    'Developer',
-    'Cyber Security Enthusiast',
-    'Data Science & Machine Learning Dreamer',
+    'CTO at Ethika',
+    'Software Architect',
+    'Cybersecurity Enthusiast',
+    'Data Science Dreamer',
     'BJJ Practitioner',
-  ],
+  ],  
   skills: [
     'C#',
     'Python',
@@ -128,6 +129,14 @@ const CONFIG = {
     'AWS cloud'
   ],
   experiences: [
+    {
+      company: 'Ethika Inc.',
+      position: 'Chief Technology Officer (CTO)',
+      description: 'Ethika is a lifestyle brand and apparel company with a strong e-commerce presence across the U.S. As CTO, I lead technology strategy, scale infrastructure for millions of customers, and manage cross-functional teams to deliver robust backend systems, data-driven insights, and seamless shopping experiences. My focus includes e-commerce automation, AI-driven analytics, and cloud-native architecture.',
+      from: 'May 2025',
+      to: 'Present',
+      companyLink: 'https://www.ethika.com',
+    },
     {
       company: 'The Dot Corp',
       position: 'Senior Software Engineer / Team Leader	',
@@ -181,10 +190,10 @@ const CONFIG = {
   ],
   educations: [
     {
-      institution: 'FPT University, Ho Chi Minh City, Viet Nam',
-      degree: ' B.S. Software Engineering',
-      from: '2008',
-      to: '2012',
+      institution: 'Texas A&M University',
+      degree: 'Master in Data Science | Statistics',
+      from: '2025',
+      to: '',
     },
     {
       institution: 'WestCliff University, California, US',
@@ -192,6 +201,13 @@ const CONFIG = {
       from: '2017',
       to: '2019',
     },
+    {
+      institution: 'FPT University, Ho Chi Minh City, Viet Nam',
+      degree: ' B.S. Software Engineering',
+      from: '2008',
+      to: '2012',
+    },
+    
   ],
   publications: [
     {

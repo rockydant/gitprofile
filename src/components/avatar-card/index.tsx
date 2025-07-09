@@ -86,15 +86,25 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               {skeleton({ widthCls: 'w-40', heightCls: 'h-8' })}
             </div>
           ) : (
-            <a
-              href={resumeFileUrl}
-              target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
-              download
-              rel="noreferrer"
-            >
-              Download Resume
-            </a>
+            <div className="flex gap-2 mt-6">
+              <a
+                href={resumeFileUrl}
+                target="_blank"
+                className="btn btn-outline btn-sm text-xs opacity-50"
+                download
+                rel="noreferrer"
+              >
+                Download Resume
+              </a>
+              <a
+                href="https://calendly.com/dtquocbao/30min"
+                target="_blank"
+                className="btn btn-primary btn-sm text-xs"
+                rel="noreferrer"
+              >
+                Schedule Meeting
+              </a>
+            </div>
           ))}
       </div>
     </div>

@@ -99,7 +99,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               <a
                 href="https://calendly.com/dtquocbao/30min"
                 target="_blank"
-                className="btn btn-primary btn-sm text-xs"
+                className="btn btn-outline btn-sm text-xs opacity-50"
                 rel="noreferrer"
               >
                 Schedule Meeting

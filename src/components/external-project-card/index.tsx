@@ -1,7 +1,8 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import LazyImage from '../lazy-image';
 import { ga, skeleton } from '../../utils';
 import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
+import { fetchSanityProjects } from '../../sanity/client';
 
 const ExternalProjectCard = ({
   externalProjects,
@@ -14,9 +15,34 @@ const ExternalProjectCard = ({
   loading: boolean;
   googleAnalyticId?: string;
 }) => {
+  const [sanityProjects, setSanityProjects] = useState<SanitizedExternalProject[]>([]);
+  const [sanityLoading, setSanityLoading] = useState(true);
+
+  // Fetch projects from Sanity
+  useEffect(() => {
+    const loadSanityProjects = async () => {
+      try {
+        setSanityLoading(true);
+        const projects = await fetchSanityProjects();
+        setSanityProjects(projects);
+      } catch (error) {
+        console.error('Failed to fetch projects from Sanity:', error);
+        setSanityProjects([]);
+      } finally {
+        setSanityLoading(false);
+      }
+    };
+
+    loadSanityProjects();
+  }, []);
+
+  // Use Sanity projects if available, otherwise fall back to config projects
+  const projectsToDisplay = sanityProjects.length > 0 ? sanityProjects : externalProjects;
+  const isLoading = sanityLoading || loading;
+
   const renderSkeleton = () => {
     const array = [];
-    for (let index = 0; index < externalProjects.length; index++) {
+    for (let index = 0; index < projectsToDisplay.length; index++) {
       array.push(
         <div className="card shadow-lg compact bg-base-100" key={index}>
           <div className="p-8 h-full w-full">
@@ -67,7 +93,7 @@ const ExternalProjectCard = ({
   };
 
   const renderExternalProjects = () => {
-    return externalProjects.map((item, index) => (
+    return projectsToDisplay.map((item, index) => (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         key={index}
@@ -132,7 +158,7 @@ const ExternalProjectCard = ({
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">
-                    {loading ? (
+                    {isLoading ? (
                       skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
                     ) : (
                       <span className="text-base-content opacity-70">
@@ -143,7 +169,7 @@ const ExternalProjectCard = ({
                 </div>
                 <div className="col-span-2">
                   <div className="grid grid-cols-1 gap-6">
-                    {loading ? renderSkeleton() : renderExternalProjects()}
+                    {isLoading ? renderSkeleton() : renderExternalProjects()}
                   </div>
                 </div>
               </div>

@@ -6,6 +6,7 @@ import { formatDistance } from 'date-fns';
 import { SanitizedBlog } from '../../interfaces/sanitized-config';
 import { ga, skeleton } from '../../utils';
 import { Article } from '../../interfaces/article';
+import { fetchSanityBlogPosts } from '../../sanity/client';
 
 const BlogCard = ({
   loading,
@@ -31,8 +32,14 @@ const BlogCard = ({
       }).then((res) => {
         setArticles(res);
       });
+    } else if (blog.source === 'sanity') {
+      fetchSanityBlogPosts(blog.limit).then((res) => {
+        setArticles(res);
+      });
     }
-  }, [blog.source, blog.username]);
+
+    console.log(articles);
+  }, [blog.source, blog.username, blog.limit]);
 
   const renderSkeleton = () => {
     const array = [];

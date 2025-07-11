@@ -164,28 +164,34 @@ const CONFIG = {
   ],
   certifications: [
     {
-      name: 'Leadership and Critical Thinking',
-      body: 'RMIT University',
-      year: '',
-      link: '',
+      name: 'The Data Science Course: Complete Data Science Bootcamp 2025',
+      body: 'Udemy',
+      year: '2025',
+      link: 'https://www.udemy.com/certificate/UC-b47b1856-5ef3-4dc8-aad5-93afbfbdb96c/',
     },
     {
       name: 'DevOps: Docker, Kubernetes, Terraform and Azure DevOps',
       body: 'Udemy',
-      year: '2014',
+      year: '2024',
       link: 'https://www.udemy.com/certificate/UC-09ca6327-446d-4166-bffc-c64dbb8f0fad/',
     },
     {
       name: 'The Complete Guide to Becoming a Software Architect',
       body: 'Udemy',
-      year: '2014',
+      year: '2024',
       link: 'https://www.udemy.com/certificate/UC-02daaf21-694b-4893-b92c-a0626e84978a/',
     },
     {
       name: 'A.I. & Machine Learning, Data Science Bootcamp',
       body: 'Udemy',
-      year: '2014',
+      year: '2024',
       link: 'https://www.udemy.com/certificate/UC-a31b7858-8835-416d-a6ec-72d7b0f85b22/',
+    },
+    {
+      name: 'Leadership and Critical Thinking',
+      body: 'RMIT University',
+      year: '',
+      link: '',
     },
   ],
   educations: [
@@ -231,9 +237,9 @@ const CONFIG = {
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
+    source: 'sanity', // medium | dev
     username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
+    limit: 10, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: 'G-28G3XJNG47', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX

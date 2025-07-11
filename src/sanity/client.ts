@@ -21,6 +21,16 @@ interface TransformedProject {
   link: string;
 }
 
+// Inline Article type to avoid jsx linter error
+export type Article = {
+  title: string;
+  description: string;
+  publishedAt: Date;
+  thumbnail: string;
+  link: string;
+  categories: string[];
+};
+
 /**
  * Fetches data from Sanity API with proper error handling
  */
@@ -153,6 +163,31 @@ export async function fetchSanityCertifications(): Promise<any[]> {
     return await fetchFromSanity(query);
   } catch (error) {
     console.log('Failed to fetch certifications from Sanity, using config fallback.');
+    return [];
+  }
+} 
+
+export async function fetchSanityBlogPosts(limit: number = 5): Promise<Article[]> {
+  try {
+    const query = `*[_type == "post"] | order(publishedAt desc)[0...${limit}] {
+      title,
+      description,
+      publishedAt,
+      image,
+      slug,
+    }`;
+    const posts = await fetchFromSanity(query);
+    // Transform to Article[]
+    return posts.map((post: any) => ({
+      title: post.title,
+      description: post.description,
+      publishedAt: post.publishedAt ? new Date(post.publishedAt) : new Date(),
+      thumbnail: post.image || '',
+      link: post.slug || '',
+      categories: [],
+    }));
+  } catch (error) {
+    console.log('Failed to fetch blog posts from Sanity, using fallback.');
     return [];
   }
 } 

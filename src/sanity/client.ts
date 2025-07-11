@@ -183,11 +183,36 @@ export async function fetchSanityBlogPosts(limit: number = 5): Promise<Article[]
       description: post.description,
       publishedAt: post.publishedAt ? new Date(post.publishedAt) : new Date(),
       thumbnail: post.image || '',
-      link: post.slug || '',
+      link: post.slug.current || '',
       categories: [],
     }));
   } catch (error) {
     console.log('Failed to fetch blog posts from Sanity, using fallback.');
     return [];
+  }
+} 
+
+export async function fetchSanityBlogPostBySlug(slug: string): Promise<Article | null> {
+  try {
+    const query = `*[_type == "blog" && (slug.current == "${slug}" || link.current == "${slug}")] {
+      title,
+      description,
+      publishedAt,
+      thumbnail,
+      link,
+      categories
+    }[0]`;
+    const post = await fetchFromSanity(query);
+    if (!post) return null;
+    return {
+      title: post.title,
+      description: post.description,
+      publishedAt: post.publishedAt ? new Date(post.publishedAt) : new Date(),
+      thumbnail: post.thumbnail || '',
+      link: typeof post.link === 'object' ? post.link.current : post.link || '#',
+      categories: post.categories || [],
+    };
+  } catch (error) {
+    return null;
   }
 } 

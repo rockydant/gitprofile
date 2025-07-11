@@ -7,6 +7,7 @@ import { SanitizedBlog } from '../../interfaces/sanitized-config';
 import { ga, skeleton } from '../../utils';
 import { Article } from '../../interfaces/article';
 import { fetchSanityBlogPosts } from '../../sanity/client';
+import { Link } from 'react-router-dom';
 
 const BlogCard = ({
   loading,
@@ -34,6 +35,7 @@ const BlogCard = ({
       });
     } else if (blog.source === 'sanity') {
       fetchSanityBlogPosts(blog.limit).then((res) => {
+        console.log(res);
         setArticles(res);
       });
     }
@@ -101,25 +103,10 @@ const BlogCard = ({
   const renderArticles = () => {
     return articles && articles.length ? (
       articles.slice(0, blog.limit).map((article, index) => (
-        <a
+        <Link
           className="card shadow-lg compact bg-base-100 cursor-pointer"
           key={index}
-          href={article.link}
-          onClick={(e) => {
-            e.preventDefault();
-
-            try {
-              if (googleAnalyticsId) {
-                ga.event('Click Blog Post', {
-                  post: article.title,
-                });
-              }
-            } catch (error) {
-              console.error(error);
-            }
-
-            window?.open(article.link, '_blank');
-          }}
+          to={`/blog/${article.link}`}
         >
           <div className="p-8 h-full w-full">
             <div className="flex items-center flex-col md:flex-row">
@@ -165,7 +152,7 @@ const BlogCard = ({
               </div>
             </div>
           </div>
-        </a>
+        </Link>
       ))
     ) : (
       <div className="text-center mb-6">

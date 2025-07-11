@@ -5,9 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true
+    "esModuleInterop": true
   },
   "include": ["gitprofile.config.ts", "vite.config.ts", "src/sanity/**/*"]
 }

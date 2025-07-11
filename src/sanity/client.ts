@@ -194,13 +194,12 @@ export async function fetchSanityBlogPosts(limit: number = 5): Promise<Article[]
 
 export async function fetchSanityBlogPostBySlug(slug: string): Promise<Article | null> {
   try {
-    const query = `*[_type == "blog" && (slug.current == "${slug}" || link.current == "${slug}")] {
+    const query = `*[_type == "post" && (slug.current == "${slug}")] {
       title,
       description,
       publishedAt,
-      thumbnail,
-      link,
-      categories
+      image,
+      slug,
     }[0]`;
     const post = await fetchFromSanity(query);
     if (!post) return null;
@@ -208,9 +207,9 @@ export async function fetchSanityBlogPostBySlug(slug: string): Promise<Article |
       title: post.title,
       description: post.description,
       publishedAt: post.publishedAt ? new Date(post.publishedAt) : new Date(),
-      thumbnail: post.thumbnail || '',
-      link: typeof post.link === 'object' ? post.link.current : post.link || '#',
-      categories: post.categories || [],
+      thumbnail: post.image || '',
+      link: post.slug.current || '',
+      categories: [],
     };
   } catch (error) {
     return null;

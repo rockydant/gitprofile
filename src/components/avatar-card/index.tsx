@@ -94,7 +94,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
                 download
                 rel="noreferrer"
               >
-                Download Resume
+                My Resume
               </a>
               <a
                 href="https://calendly.com/dtquocbao/30min"
